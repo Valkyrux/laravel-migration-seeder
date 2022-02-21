@@ -17,6 +17,6 @@ class PageController extends Controller
 
     public function show(Train $train)
     {
-        dd($train);
+        return view('more_info', compact('train'));
     }
 }
