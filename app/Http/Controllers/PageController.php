@@ -9,7 +9,9 @@ class PageController extends Controller
 {
     public function index()
     {
-        $trains = Train::where('date', '>=', date('Y-m-d'))->get();
-        return view('home', compact('trains'));
+        // $trains = Train::where('date', '>=', date('Y-m-d'))->get();
+        // return view('home', compact('trains'));
+        $trains = Train::paginate(12);
+        return view('home2', compact('trains'));
     }
 }
