@@ -14,4 +14,9 @@ class PageController extends Controller
         $trains = Train::paginate(12);
         return view('home2', compact('trains'));
     }
+
+    public function show(Train $train)
+    {
+        dd($train);
+    }
 }

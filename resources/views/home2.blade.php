@@ -35,6 +35,9 @@
               </div>
         </div>
         @endforeach
+        <div class="col-12 d-flex justify-content-center">
+            {{$trains->links()}}
+        </div>
     </div>
 </div>
 @endsection
